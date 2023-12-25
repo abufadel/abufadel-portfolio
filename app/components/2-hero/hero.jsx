@@ -62,7 +62,7 @@ const Hero = () => {
                         transition={{ duration: 2 }}
                     >
                         My mission is to blend creativity with technology, 
-                        <a href="#">Let&apos;s connect</a> and bring your digital vision to life!
+                        <a href="#contact">Let&apos;s connect</a> and bring your digital vision to life!
                     </motion.p>
                 </div>
                     <ul class="social">
