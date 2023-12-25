@@ -11,6 +11,10 @@ import p1 from './assets/imgs/p1.jpg';
 import p2 from './assets/imgs/p2.jpg';
 import p3 from './assets/imgs/p3.jpg';
 import p4 from './assets/imgs/p4.jpg';
+import tailwind from './assets/imgs/tailwind.png';
+import ch1 from './assets/imgs/ch1.png';
+import ch2 from './assets/imgs/ch2.png';
+
 
 
 const myProjects = [
@@ -42,6 +46,15 @@ const myProjects = [
         rebo: 'https://github.com/abufadel/ToDoList'
     },
     {
+        projectTitle: 'Tailwind',
+        catergory: 'htmlCss',
+        imagePath: tailwind,
+        history: '8/2023',
+        subtitle: 'Using HTML & Tailwind',
+        demo: 'https://tailwind-training-lovat.vercel.app/',
+        rebo: 'https://github.com/abufadel/tailwind_training'
+    },
+    {
         projectTitle: 'Dashboard',
         catergory: 'htmlCss',
         imagePath: p1,
@@ -50,6 +63,25 @@ const myProjects = [
         demo: 'https://abufadel.github.io/Simple-Project',
         rebo: 'https://github.com/abufadel/Simple-Project'
     },
+    {
+        projectTitle: 'Qr code',
+        catergory: 'challenge',
+        imagePath: ch1,
+        history: '6/2023',
+        subtitle: 'Using HTML & CSS',
+        demo: 'https://abufadel.github.io/Temp1_frontend_mentor',
+        rebo: 'https://github.com/abufadel/Temp1_frontend_mentor'
+    },
+    {
+        projectTitle: '4 Cards',
+        catergory: 'challenge',
+        imagePath: ch2,
+        history: '6/2023',
+        subtitle: 'Using HTML & CSS',
+        demo: 'https://abufadel.github.io/Temp2_frontend_mentor',
+        rebo: 'https://github.com/abufadel/Temp2_frontend_mentor'
+    },
+    
     
     
 ]
@@ -94,6 +126,11 @@ const Main = () => {
                     handleClick('react')
                 }} class={currentActive === "react" ? "Btn active" : "Btn"}>
                     React.js
+                </button>
+                <button onClick={() => {
+                    handleClick('challenge')
+                }} class={currentActive === "challenge" ? "Btn active" : "Btn"}>
+                    Challenges
                 </button>
                 
             </section>
