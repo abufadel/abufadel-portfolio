@@ -190,7 +190,7 @@
     );
     background: linear-gradient(#e48825, #e78e0e, #833c03, #4c1a03 50%, #1c0900);
 }
-
+/*  */
 .candle:before {
     width: 98%;
     height: 40px;
