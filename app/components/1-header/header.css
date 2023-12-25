@@ -14,7 +14,8 @@
 
 header.flex {
     justify-content: space-between;
-    padding: 0 2.4rem;
+    padding: 1rem 2.4rem 2rem;
+    position: relative;
 }
 
 header nav {
@@ -27,6 +28,8 @@ header nav {
     box-shadow: 1px 1px 40px #c5c5d02a;
     margin-top: 1.2rem;
     background-color: #242427;
+    position: absolute;
+    right: 0;
 }
 
 .light header nav {
@@ -61,6 +64,14 @@ header .menu {
     display: none;
 }
 
+header .abufadel-logo {
+    color: transparent;
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    top: 1rem;
+    left: -2rem;
+}
 /* ========================
     2. popUp
 ========================== */
@@ -327,10 +338,31 @@ header .fixed ul.model li .x-close:hover {
 ========================== */
 
 @media (max-width: 768px) {
+    header.flex {
+        padding-bottom: 5rem;
+    }
     header nav {
         display: none;
     }
+    header .abufadel-logo {
+        color: transparent;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        top: 1rem;
+        left: -2rem;
+    }
+    header .abufadel-logo-div {
+        position: absolute;
+        left: 2rem;
+        top: 0.5rem;
+    }
     header .menu {
         display: block;
+    }
+    .toggle {
+            position: absolute;
+        right: 1rem;
+        top: 2rem;
     }
 }

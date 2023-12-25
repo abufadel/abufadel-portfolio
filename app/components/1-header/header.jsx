@@ -5,28 +5,17 @@ import "./header.css";
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
+import { motion } from "framer-motion"
+import abufadelLogo from './fadelLogo.ico';
 
 const Header = () => {
 
-    const handleLocalStorage = () => {
-        if (typeof window !== 'undefined') {
-            localStorage.setItem('myCat', 'Tom');
-        }
-    }
+
 
     const [showPopUp, setShowPopUp] = useState(false);
     
-    const [theme, setTheme] = useState(handleLocalStorage ?? "dark");
 
-    useEffect(() => {
-    if (theme === "light") {
-        document.body.classList.remove("dark");
-        document.body.classList.add("light");
-    } else {
-        document.body.classList.remove("light");
-        document.body.classList.add("dark");
-    }
-    }, [theme]);
     return (
         <header className="flex" >
             <div className='menu' onClick={() => {
@@ -40,7 +29,15 @@ const Header = () => {
                 </label>
             </div>
 
+            <motion.div className='abufadel-logo-div' 
+                initial={{ transform: "scale(0)" }}
+                animate={{ transform: "scale(1.1)" }}
+                transition={{ damping: 6, type: "spring", stiffness: 100 }}
+            >
+            <Image className='abufadel-logo' src={abufadelLogo} alt="abufadel-Logo" />
+            </motion.div>
             <div />
+
             <nav>
                 <ul className="flex" >
                     <li>
@@ -54,14 +51,6 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <label class="switch">
-                <input onClick={() => {
-                    localStorage.setItem('currentMode', theme === "dark" ? "light" : "dark");
-                    setTheme(localStorage.getItem('currentMode'));
-                }} type="checkbox" class="input__check"></input>
-                <span class="slider"></span>
-            </label>
-
 
             {showPopUp && (<div className="fixed">
                 <ul className="model">
