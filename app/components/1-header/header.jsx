@@ -60,13 +60,19 @@ const Header = () => {
                         }} icon={faXmark} />
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a onClick={() => {
+                            setShowPopUp(false);
+                        }} href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a onClick={() => {
+                            setShowPopUp(false);
+                        }} href="#project">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a onClick={() => {
+                            setShowPopUp(false);
+                        }} href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>)}
