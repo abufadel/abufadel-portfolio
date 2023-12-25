@@ -5,20 +5,27 @@ import "./header.css";
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
+
 const Header = () => {
 
+    const handleLocalStorage = () => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('myCat', 'Tom');
+        }
+    }
+
     const [showPopUp, setShowPopUp] = useState(false);
-    const [theme, setTheme] = useState(localStorage.getItem('currentMode') ?? 'dark');
+    
+    const [theme, setTheme] = useState(handleLocalStorage ?? "dark");
 
     useEffect(() => {
-        if(theme === 'light') {
-            document.body.classList.remove('dark');
-            document.body.classList.add('light');
-        } else {
-            document.body.classList.remove('light');
-            document.body.classList.add('dark');
-
-        }
+    if (theme === "light") {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+    } else {
+        document.body.classList.remove("light");
+        document.body.classList.add("dark");
+    }
     }, [theme]);
     return (
         <header className="flex" >

@@ -8,7 +8,6 @@ import Footer from './components/5-footer/footer';
 import { useEffect, useState } from "react";
 import React from 'react';
 
-
 export default function Home() {
 
   const [showScroll, setShowScroll] = useState(false);
