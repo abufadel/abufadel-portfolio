@@ -79,7 +79,7 @@ header .abufadel-logo {
 header .fixed {
     position: fixed;
     inset: 0;
-    background-color: var(--primary-bg);
+    background-color: #000000ab;
     z-index: 100;
     backdrop-filter: blur(4px);
 }
