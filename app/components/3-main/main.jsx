@@ -109,23 +109,22 @@ const Main = () => {
                         All Projects
                     </button>
                 </div>
+                <button onClick={() => {
+                    handleClick('react')
+                }} class={currentActive === "react" ? "Btn active" : "Btn"}>
+                    React.js
+                </button>
+                <button onClick={() => {
+                    handleClick('js')
+
+                }} class={currentActive === "js" ? "Btn active" : "Btn"}>
+                    JavaScript
+                </button>
 
                 <button onClick={() => {
                     handleClick('htmlCss')
                 }} class={currentActive === "htmlCss" ? "Btn active" : "Btn"}>
                     HTML & CSS
-                </button>
-
-                <button onClick={() => {
-                    handleClick('js')
-                    
-                }} class={currentActive === "js" ? "Btn active" : "Btn"}>
-                    JavaScript
-                </button>
-                <button onClick={() => {
-                    handleClick('react')
-                }} class={currentActive === "react" ? "Btn active" : "Btn"}>
-                    React.js
                 </button>
                 <button onClick={() => {
                     handleClick('challenge')
